@@ -1,0 +1,262 @@
+<section class="" style="background: #fff; height:auto;">
+
+
+    <app-header></app-header>
+
+
+
+    <main class="">
+
+
+        <div class="mt-1 mt-lg-3 container-fluid p-0">
+            <div class="row m-0">
+                <div class="blue-header" style="height: 35px; background-color: #22417f;">
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row m-0" style="background: #F0F0F0;">
+            <div class="col-md-3 p-0">
+                <!-- Sidebar -->
+                <app-sidebar></app-sidebar>
+                <!-- Sidebar -->
+            </div>
+            <div class="col-md-9 p-0">
+                <div class="main-content">
+                    <!-- <div class="row" style="padding-bottom: 50px;">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-2 d-flex justify-content-end align-items-center">
+                            <label class="form-label text-end" style="color: #22417f; font-size: 14px;">Account #: </label>
+                        </div>
+                        <div class="col-md-3 p-0">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>{{folionumber}}</option>
+                              </select>
+                        </div>
+                    </div> -->
+
+                    <div class="row d-flex justify-content-left">
+                        <!-- First Card: Portfolio Summary -->
+                        <div class="col-md-4 col-12 my-5">
+                            <div class="card custom-card h-100">
+                                <h5 class="card-title">
+                                    Portfolio Summary
+                                </h5>
+                                <div class="card-body px-0">
+                                    <div class="row m-0">
+                                        <div class="col-12">
+                                            <ul class="list-unstyled">
+                                                <li class="investment-value-label">Investment Value</li>
+                                                <li class="investment-value-amount">Rs. {{totalBalanceAmount}}</li>
+                                                <li class="text-dark">As on {{asOnDate}}</li>
+                                                <li class="border-0">
+                                                    <a href="#" routerLink="/portfolioAllocationDetails">
+                                                        <button class="btn btn-orange">Check Details</button>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Second Card: Portfolio Analytics -->
+                        <div class="col-md-4 col-12 my-5">
+                            <div class="card custom-card h-100">
+                                <h5 class="card-title">
+                                    My Portfolio Analytics
+                                </h5>
+                                <div class="card-body align-self-center">
+                                    <div class="row m-0">
+                                        <div class="col-md-2 col-3 p-0 d-flex">
+                                            <span class="currency-badge">PKR</span>
+                                        </div>
+                                        <div class="col-md-10 col-9 text-start">
+                                            <div class="investment-value-label">Investment Value</div>
+                                            <div class="investment-value-amount">Rs. {{totalBalanceAmount}}</div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-3 text-center d-flex justify-content-center">
+                                        <app-chart [chartData]="chartData"></app-chart>
+                                    </div>
+                                    <!-- <div class="text-center">
+                                        <span style="color: #22417f">As On</span><br>
+                                        <i class="far fa-calendar" style="color: #F06A25" aria-hidden="true"></i>
+                                        <span class="text-dark"> {{asOnDate}}</span>
+                                    </div> -->
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <!-- Third Card: Company Advertisement -->
+                        <div class="col-md-4 col-12 my-5">
+                            <div class="card custom-card h-100 ad-card">
+                                <div class="card-body p-0 text-center">
+                                    <div class="ad-content h-100">
+                                        <div id="carouselExampleIndicators" class="carousel slide h-100" data-bs-ride="carousel" data-bs-interval="2000">
+                                            <div class="carousel-indicators">
+                                                <button type="button" class="active btn-orange" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
+                                                <button type="button" class="btn-orange" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                                <button type="button" class="btn-orange" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                            </div>
+                                            <div class="carousel-inner h-100">
+                                                <div class="carousel-item active h-100">
+                                                    <img src="assets/images/ads/ad1.png" class="d-block w-100 h-100 img-fluid" alt="Slide 1">
+                                                    <div class="overlay">
+                                                        <div class="carousel-caption">
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, esse!</p>
+                                                            <a href="#" class="btn btn-orange">View More</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item h-100">
+                                                    <img src="assets/images/ads/ad1.png" class="d-block w-100 h-100 img-fluid" alt="Slide 2">
+                                                    <div class="overlay">
+                                                        <div class="carousel-caption">
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, esse!</p>
+                                                            <a href="#" class="btn btn-orange">View More</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item h-100">
+                                                    <img src="assets/images/ads/ad1.png" class="d-block w-100 h-100 img-fluid" alt="Slide 3">
+                                                    <div class="overlay">
+                                                        <div class="carousel-caption">
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, esse!</p>
+                                                            <a href="#" class="btn btn-orange">View More</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon btn-orange d-none" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon btn-orange d-none" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-12 p-0">
+                            <div class="card w-100 p-4">
+                                <div class="card-header">
+                                    <div class="row m-0 py-2 d-flex align-items-center">
+                                        <div class="col-md-8 col-12 p-0">
+                                            <h5>
+                                                <i class="fa-regular fa-arrows-retweet p-2 rounded-2"
+                                                    style="color: #ffffff; background-color: #f06a25;"></i>
+                                                <span class="table-head-title">
+                                                    Transaction Status
+                                                </span>
+                                            </h5>
+                                        </div>
+                                        <div class="col-md-4 col-12 p-0">
+                                            <div class="row m-0 d-flex flex-wrap">
+                                                <div class="col-md-6 col-6 p-0">
+                                                    <button class="btn w-100 inprocess_toggle" 
+                                                    (click)="getTransactionDetail('INPROCESS')">In-Process</button>
+                                                </div>
+                                                <div class="col-md-6 col-6 p-0">
+                                                    <button class="btn w-100 executed_toggle" 
+                                                    (click)="getTransactionDetail('EXECUTED')">Executed</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="table-responsive text-nowrap px-5" style="max-height: 300px !important;">
+                                    <table class="table table-hover">
+                                        <thead class="" style="background-color: #22417f;">
+                                            <tr class="">
+                                                <th class="text-white fw-bold">Date <i
+                                                        class="fa-sharp fa-solid fa-filter" style="color: #ffffff;"></i>
+                                                </th>
+                                                <th class="text-white fw-bold">Fund <i
+                                                        class="fa-sharp fa-solid fa-filter" style="color: #ffffff;"></i>
+                                                </th>
+                                                <th class="text-white fw-bold">Type <i
+                                                        class="fa-sharp fa-solid fa-filter" style="color: #ffffff;"></i>
+                                                </th>
+                                                <th class="text-white fw-bold">Units</th>
+                                                <th class="text-white fw-bold">Amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="table-border-bottom-0">
+                                            @if (transactionDetail.length == 0) {
+                                                <tr>
+                                                    <td colspan="5" class="text-center">No data available</td>
+                                                </tr>
+                                            }
+                                            @else {
+                                                <tr *ngFor="let transaction of transactionDetail">
+                                                    <td>{{ transaction.transDate }}</td>
+                                                    <td>{{ transaction.fundName }}</td>
+                                                    <td>{{ transaction.transType }}</td>
+                                                    <td>{{ transaction.units }}</td>
+                                                    <td>{{ transaction.amount }}</td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                    <tfoot class="d-none">
+                                        <tr>
+                                            <td colspan="5" class="">
+                                                <nav aria-label="Page navigation">
+                                                    <ul class="pagination pagination-sm">
+                                                        <li class="page-item prev">
+                                                            <a class="page-link" href="javascript:void(0);"><i
+                                                                    class="tf-icon ti ti-chevrons-left ti-xs"></i></a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="javascript:void(0);">1</a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="javascript:void(0);">2</a>
+                                                        </li>
+                                                        <li class="page-item active">
+                                                            <a class="page-link" href="javascript:void(0);">3</a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="javascript:void(0);">4</a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="javascript:void(0);">5</a>
+                                                        </li>
+                                                        <li class="page-item next">
+                                                            <a class="page-link" href="javascript:void(0);"><i
+                                                                    class="tf-icon ti ti-chevrons-right ti-xs"></i></a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+
+</section>

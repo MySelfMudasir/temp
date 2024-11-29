@@ -1,0 +1,98 @@
+<section class="" style="background: #fff; height:auto;">
+
+
+    <app-header></app-header>
+
+
+
+    <main class="">
+
+
+        <div class="mt-1 mt-lg-3 container-fluid p-0">
+            <div class="row m-0">
+                <div class="blue-header" style="height: 35px; background-color: #22417f;">
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row m-0" style="background: #f0f0f0;">
+            <div class="col-md-3 p-0">
+                <!-- Sidebar -->
+                <app-sidebar></app-sidebar>
+                <!-- Sidebar -->
+            </div>
+            <div class="col-md-9 p-0">
+                <div class="main-content">
+
+                    <div class="row">
+                        <div class="col-12 p-0">
+                            <div class="card w-100 p-4">
+                                <div class="card-header">
+                                    <div class="row m-0 d-flex align-items-center">
+                                        <div class="col-md-8 col-12 p-0">
+                                            <h5>
+                                                <i class="fa-solid fa-chart-line p-2 rounded-2"
+                                                    style="color: #ffffff; background-color: #f06a25;"></i>
+                                                <span class="table-head-title">
+                                                    Portfolio Summary
+                                                </span>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="table-responsive text-nowrap px-5">
+                                    <table class="table table-hover text-center">
+                                        <thead class="" style="background-color: #22417f;">
+                                            <tr class="">
+                                                <th class="text-white fw-bold">FUND NAME
+                                                    <!-- <i class="fa-sharp fa-solid fa-filter" style="color: #ffffff;"></i> -->
+                                                </th>
+                                                <th class="text-white fw-bold">No. of Units	 
+                                                    <!-- <i class="fa-sharp fa-solid fa-filter" style="color: #ffffff;"></i> -->
+                                                </th>
+                                                <th class="text-white fw-bold">NAV (Rs.) 
+                                                    <!-- <i class="fa-sharp fa-solid fa-filter" style="color: #ffffff;"></i> -->
+                                                </th>
+                                                <th class="text-white fw-bold">NAV DATE</th>
+                                                <th class="text-white fw-bold">NVESTMENT VALUE <br>
+                                                    (Rs.)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="table-border-bottom-0">
+                                            <tr *ngFor="let allocation of portfolioAllocation">
+                                                <td>{{ allocation.fundName }}</td>
+                                                <td>{{ allocation.availableUnits }}</td>
+                                                <td>{{ allocation.navPrice }}</td>
+                                                <td>{{ allocation.navDate }}</td>
+                                                <td>{{ allocation.availableAmount }}</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot class="" style="background-color: #f06a25;">
+                                            <tr class="">
+                                                <td colspan="4" class="fw-bold text-end text-white">
+                                                    Total Investment Value (Rs.):
+                                                </td>
+                                                <td class="fw-bold text-white">
+                                                    {{ totalBalanceAmount }}
+                                                </td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+
+</section>
